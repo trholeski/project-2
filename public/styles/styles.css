@@ -2,6 +2,10 @@
   line-height: 2.5;
 }
 
+.form-popup {
+  display: none;
+}
+
 :root {
   --primary-color: #000000;
   --primary-hover-color: #a57825;
@@ -41,8 +45,6 @@ a:hover {
   flex-wrap: wrap;
   margin-top: 75px;
 }
-
-
 
 /* Header */
 header {

@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": "adhawaiiu",
-    "database": "exampledb",
+    "password": "",
+    "database": "teamData_db",
     "host": "localhost",
     "dialect": "mysql"
   },
