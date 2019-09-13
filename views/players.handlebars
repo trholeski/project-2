@@ -1,0 +1,25 @@
+<section id="players" class="player-profile">
+    <h1>Player Profile</h1>
+
+{{!-- replace 'player' with DB name --}}
+    {{#each player}}  
+      <div class="player">
+      <h3>{{battle_id}}</h3>
+
+      <ul>
+        <li>{{role}}</li>
+        <li>{{score}}</li>
+        <li>{{platform}}</li>
+      </ul>
+
+      <div class="contact">
+        <small><span><a href="mailto:{{contact_email}}" class="btn btn-reverse">Contact</a></span></small>
+      </div>
+    </div>
+    {{else}}
+      <p>Other?</p>
+    {{/each}}
+
+    <a href="/">← Back To Home</a>
+
+  </section>
