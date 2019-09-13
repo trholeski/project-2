@@ -6,6 +6,3 @@ npm-debug.log
 .env
 /config
 config/
-config/config.json
-/config/config.json
-config.json
