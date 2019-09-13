@@ -1,23 +1,25 @@
 var db = require("../models");
 
 module.exports = function(app) {
-  // Load index page
+  // Load Team List page
   app.get("/", function(req, res) {
-    db.Example.findAll({}).then(function(dbExamples) {
-      res.render("index", {
+    db.TeamData.findAll({}).then(function(dbTeamDatas) {
+      // Render the page to handlebars (teamList.handlebars)
+      res.render("teamList", {
         msg: "Welcome!",
-        examples: dbExamples
+        teamData: dbTeamDatas
       });
     });
   });
 
-  // Load example page and pass in an example by id
-  app.get("/example/:id", function(req, res) {
-    db.Example.findOne({ where: { id: req.params.id } }).then(function(
-      dbExample
+  // Load Team Lobby page and pass in an team by id
+  app.get("/teamData/:id", function(req, res) {
+    db.TeamData.findOne({ where: { id: req.params.id } }).then(function(
+      dbTeamData
     ) {
-      res.render("example", {
-        example: dbExample
+      // Render the page to handlebars (teamLobby.handlebars)
+      res.render("teamLobby", {
+        teamData: dbTeamData
       });
     });
   });
