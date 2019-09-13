@@ -5,3 +5,119 @@
 .form-popup {
   display: none;
 }
+
+:root {
+  --primary-color: #000000;
+  --primary-hover-color: #a57825;
+  --bg-color: rgb(87, 84, 84);
+  --box-shadow: 3px 4px 12px rgba(0, 0, 0, 0.7);
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  color: #333;
+  background: var(--bg-color);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--primary-hover-color);
+}
+
+.container {
+  max-width: 960px;
+  padding: 1rem 4rem;
+  margin: auto;
+  overflow: hidden;
+}
+
+.row {
+  flex-wrap: wrap;
+  margin-top: 75px;
+}
+
+/* Header */
+header {
+  display: flex;
+  position: absolute;
+  font-size: 18px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 6rem;
+}
+
+header nav ul {
+  display: flex;
+}
+
+header nav li {
+  margin: 0 1rem;
+}
+
+header.inner {
+  background: var(--bg-color);
+  opacity: 0.9;
+  border-bottom: 4px solid var(--primary-color);
+  position: relative;
+  box-shadow: var(--box-shadow);
+}
+
+
+/* Player Profile */
+.player-profile {
+  background: url('../image/OVR.png') no-repeat center center fixed / cover;
+  height: 100vh;
+  width: 100%;
+  padding: 1.3rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.player-profile h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #fff;
+  margin: 0 0 1.5rem;
+  text-align: center;
+}
+
+
+
+/* TEAMS PAGE */
+.teams {
+  background: var(--bg-color);
+  border-bottom: 4px solid var(--primary-color);
+  color: #fff;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: var(--box-shadow);
+}
+
+.teams ul {
+  list-style: none;
+  display: flex;
+}
+
+.teams li {
+  margin-right: 0.5rem;
+  padding: 0.6rem;
+}
+
+
+
+
