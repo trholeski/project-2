@@ -3,12 +3,6 @@
     <div class = 'jumbotron'></div>
     <div class="row">
       <div class="col-8 offset-2">
-<<<<<<< HEAD:views/index.handlebars
-        <h1>{{msg}}</h1>
-        <h2>This is our Home Page!</h2>
-        
-=======
->>>>>>> f83a9bfc80698eb8f5350deaffe03357a981cd40:views/teamList.handlebars
         <form class="clearfix mb-4" action="POST">
           <div class="form-group">
             <label for="teamData-name">TEAM NAME</label>
@@ -20,17 +14,10 @@
           </div>
           <button id="submit" class="btn btn-primary float-right">Submit</button>
         </form>
-<<<<<<< HEAD:views/index.handlebars
 
-
-        <h3>Examples:</h3>
-        <ul id="example-list" class="list-group">
-          {{#each examples}}
-=======
         <h3 class='text-center'>LIST OF TEAMS</h3>
         <ul id="teamData-list" class="list-group">
           {{#each teamData}}
->>>>>>> f83a9bfc80698eb8f5350deaffe03357a981cd40:views/teamList.handlebars
           <li data-id="{{this.id}}" class="list-group-item">
             <a href="teamData/{{this.id}}">{{this.teamName}}</a>
             <button class="btn btn-danger float-right delete">ｘ</button>
