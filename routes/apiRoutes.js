@@ -17,9 +17,7 @@ module.exports = function(app) {
 
   // Delete an TeamData by id
   app.delete("/api/TeamDatas/:id", function(req, res) {
-    db.TeamData.destroy({ where: { id: req.params.id } }).then(function(
-      dbTeamData
-    ) {
+    db.TeamData.destroy({ where: { id: req.params.id } }).then(function(dbTeamData) {
       res.json(dbTeamData);
     });
   });

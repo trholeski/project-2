@@ -34,7 +34,7 @@ var API = {
       url: "api/TeamDatas/" + id,
       type: "DELETE"
     });
-  }
+  },
 };
 
 // refreshTeamList gets new teams from the db and repopulates the list
