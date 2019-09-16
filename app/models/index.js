@@ -6,6 +6,8 @@ var Sequelize = require("sequelize");
 var basename = path.basename(module.filename);
 var env = process.env.NODE_ENV || "development";
 var config = require(__dirname + "/../config/config.json")[env];
+    //from auth file
+//var config = require(path.join(__dirname, '..', 'config', 'config.json'))[env];
 var db = {};
 
 if (config.use_env_variable) {
@@ -40,3 +42,27 @@ db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
 module.exports = db;
+
+
+//the rest of the file from the auth project for the purpose of comparison and troubleshooting:
+// fs
+//     .readdirSync(__dirname)
+//     .filter(function(file) {
+//         return (file.indexOf(".") !== 0) && (file !== "index.js");
+//     })
+//     .forEach(function(file) {
+//         var model = sequelize.import(path.join(__dirname, file));
+//         db[model.name] = model;
+//     });
+ 
+// Object.keys(db).forEach(function(modelName) {
+//     if ("associate" in db[modelName]) {
+//         db[modelName].associate(db);
+//     }
+// });
+ 
+ 
+// db.sequelize = sequelize;
+// db.Sequelize = Sequelize;
+ 
+// module.exports = db;
