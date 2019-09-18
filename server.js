@@ -24,7 +24,7 @@ app.use(session({
 })); // session secret
 app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions
- 
+
 //models being used for auth - to be imported into project db
 var models = require("./app/models");
 
@@ -61,7 +61,6 @@ var syncOptions = { force: false };
 if (process.env.NODE_ENV === "test") {
   syncOptions.force = true;
 }
-
 
     //how i synced the models and handled errors:
 // models.sequelize.sync().then(function() {
