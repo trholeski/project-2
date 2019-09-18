@@ -1,15 +1,12 @@
+
+
 // Get references to page elements
 var $teamName = $("#teamData-name");
 var $teamDescription = $("#teamData-description");
 var $submitBtn = $("#submit");
 var $teamDataList = $("#teamData-list");
 var $joinTeam1 = $(".joinTeam1");
-var $joinTeam2 = $(".joinTeam2");
-var $joinTeam3 = $(".joinTeam3");
-var $joinTeam4 = $(".joinTeam4");
-var $joinTeam5 = $(".joinTeam5");
-var $joinTeam6 = $(".joinTeam6");
-var $closeJoinTeam = $(".closeJoinTeam");
+
 
 // The API object contains methods for each kind of request we'll make
 var API = {
@@ -99,31 +96,7 @@ var handleDeleteBtnClick = function() {
 };
 
 var joinTeam1 = function() {
-  $("#joinTeamForm1").css("display", "block");
-}
-var joinTeam2 = function() {
-  $("#joinTeamForm2").css("display", "block");
-}
-var joinTeam3 = function() {
-  $("#joinTeamForm3").css("display", "block");
-}
-var joinTeam4 = function() {
-  $("#joinTeamForm4").css("display", "block");
-}
-var joinTeam5 = function() {
-  $("#joinTeamForm5").css("display", "block");
-}
-var joinTeam6 = function() {
-  $("#joinTeamForm6").css("display", "block");
-}
-
-var closeJoinTeam = function() {
-  $("#joinTeamForm1").css("display", "none");
-  $("#joinTeamForm2").css("display", "none");
-  $("#joinTeamForm3").css("display", "none");
-  $("#joinTeamForm4").css("display", "none");
-  $("#joinTeamForm5").css("display", "none");
-  $("#joinTeamForm6").css("display", "none");
+  console.log();
 }
 
 
@@ -131,9 +104,3 @@ var closeJoinTeam = function() {
 $submitBtn.on("click", handleFormSubmit);
 $teamDataList.on("click", ".delete", handleDeleteBtnClick);
 $joinTeam1.on("click", joinTeam1);
-$joinTeam2.on("click", joinTeam2);
-$joinTeam3.on("click", joinTeam3);
-$joinTeam4.on("click", joinTeam4);
-$joinTeam5.on("click", joinTeam5);
-$joinTeam6.on("click", joinTeam6);
-$closeJoinTeam.on("click", closeJoinTeam);
