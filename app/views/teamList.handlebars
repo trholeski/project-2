@@ -1,32 +1,67 @@
+<nav class="navbar navbar-dark bg-dark justify-content-end ">
+  <a class="brand" href="/"><img style="height:170px;" src="/image/FUZE2.png"></a>
+  <ul class="nav">
+    <li id="nav_links" class="nav-item">
+      <a class="nav-link active" href="#">Team List</a>
+    </li>
+    <li id="nav_links" class="nav-item">
+      <a class="nav-link" href="#">My Profile</a>
+    </li>
+    <li id="nav_links" class="nav-item">
+      <a class="nav-link" href="#">Team Page</a>
+    </li>
+  </ul>
+</nav>
 
-  <div class="container">
-    <div class="row">
-      <div class="col-8 offset-2">
-        <form class="clearfix mb-4" action="POST">
-          <div class="form-group">
-            <label for="teamData-name">TEAM NAME</label>
-            <input type="text" id="teamData-name" class="form-control" aria-describedby="teamData-name" placeholder="Enter teamData Text">
-          </div>
-          <div class="form-group">
-            <label for="teamData-description">TEAM DESCRIPTION</label>
-            <textarea class="form-control" id="teamData-description" aria-describedby="teamData-description" placeholder="Enter teamData Description"></textarea>
-          </div>
-          <button id="submit" class="btn btn-primary float-right">Submit</button>
-        </form>
-        <h3 class='text-center'>LIST OF TEAMS</h3>
-        <ul id="teamData-list" class="list-group">
-          {{#each teamData}}
-          <li data-id="{{this.id}}" class="list-group-item">
-            <a href="teamData/{{this.id}}">{{this.teamName}}</a>
-            <button class="btn btn-danger float-right delete">ｘ</button>
-          </li>
-          {{/each}}
-        </ul>
-
-
+<header>
+  <div class="overlay"></div>
+  <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+    <source src="/image/OVW2.mp4" type="video/mp4">
+  </video>
+<div id="welcome_text"  class="container h-100">
+    <div class="d-flex text-center align-items-center">
+      <div class="w-100 text-white">
+        <p class="display-3">Find Your Team</p>
       </div>
     </div>
+</div>
+
+</header>
+
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-8 offset-2">
+      <form class="clearfix mb-4" action="POST">
+        <div class="form-group">
+          <label for="teamData-name">TEAM NAME</label>
+          <input type="text" id="teamData-name" class="form-control" aria-describedby="teamData-name"
+            placeholder="Enter teamData Text">
+        </div>
+        <div class="form-group">
+          <label for="teamData-description">TEAM DESCRIPTION</label>
+          <textarea class="form-control" id="teamData-description" aria-describedby="teamData-description"
+            placeholder="Enter teamData Description"></textarea>
+        </div>
+        <button id="submit" class="btn btn-primary float-right">Submit</button>
+      </form>
+      <h3 class='text-center'>LIST OF TEAMS</h3>
+      <ul id="teamData-list" class="list-group">
+        {{#each teamData}}
+        <li data-id="{{this.id}}" class="list-group-item">
+          <a href="teamData/{{this.id}}">{{this.teamName}}</a>
+          <button class="btn btn-danger float-right delete">ｘ</button>
+        </li>
+        {{/each}}
+      </ul>
+
+
+    </div>
   </div>
+</div>
+
 
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
