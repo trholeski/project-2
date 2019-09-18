@@ -17,9 +17,7 @@ module.exports = function(app, passport) {
 
     // Load Team Lobby page and pass in an team by id
     app.get("/teamData/:id", function(req, res) {
-    db.TeamData.findOne({ where: { id: req.params.id } }).then(function(
-        dbTeamData
-    ) {
+    db.TeamData.findOne({ where: { id: req.params.id } }).then(function(dbTeamData) {
         // Render the page to handlebars (teamLobby.handlebars)
         res.render("teamLobby", {
         teamData: dbTeamData,

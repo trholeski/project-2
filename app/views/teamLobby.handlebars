@@ -6,82 +6,39 @@
         <div class="card-body">
           <h5 class="card-title text-center">{{teamData.teamName}}</h5>
           <p>
-            <strong>Team ID:</strong>: {{teamData.id}}</p>
+            <strong>Team ID:</strong>:{{teamData.id}}</p>
           <p>
             <strong>Description:</strong> {{teamData.teamDescription}}
           </p>
-          </div>
-          <div class="card-body" id='member1'>
-          <button class="open-button joinTeam1">Join Team</button>
-          <p>
-            <strong>Member ID</strong>:</p>
-          </p>
-          <p>
-            <strong>Username</strong>:</p>
-          <p>
-            <strong>Role</strong>:
-          </p>
         </div>
-        <div class="card-body" id='member2'>
-          <button class="open-button joinTeam2">Join Team</button>
-          <p>
-            <strong>Member ID</strong>:</p>
-
-          </p>
-          <p>
-            <strong>Username</strong>:</p>
-          <p>
-            <strong>Role</strong>:
-          </p>
-        </div>
-        <div class="card-body" id='member3'>
-          <button class="open-button joinTeam3">Join Team</button>
-          <p>
-            <strong>Member ID</strong>:</p>
-
-          </p>
-          <p>
-            <strong>Username</strong>:</p>
-          <p>
-            <strong>Role</strong>:
-          </p>
-        </div>
-        <div class="card-body" id='member4'>
-          <button class="open-button joinTeam4">Join Team</button>
-          <p>
-            <strong>Member ID</strong>:</p>
-          </p>
-          <p>
-            <strong>Username</strong>:</p>
-          <p>
-            <strong>Role</strong>:
-          </p>
-        </div>
-        <div class="card-body" id='member5'>
-          <button class="open-button joinTeam5">Join Team</button>
-          <p>
-            <strong>Member ID</strong>:</p>
-
-          </p>
-          <p>
-            <strong>Username</strong>:</p>
-          <p>
-            <strong>Role</strong>:
-          </p>
-        </div>
-        <div class="card-body" id='member6'>
-          <button class="open-button joinTeam6">Join Team</button>
-          <p>
-            <strong>Member ID</strong>:</p>
-
-          </p>
-          <p>
-            <strong>Username</strong>:</p>
-          <p>
-            <strong>Role</strong>:
-          </p>
-        </div>
-        {{!-- <a href="/">← Back To Home</a> --}}
+        <button class="open-button joinTeam1" data-id="{{teamData.id}}">Join Team</button>
+      <h3 class='text-center'>LIST OF TEAMS</h3>
+      <ul id="teamData-list" class="list-group">
+        <li data-id="{{teamData.id}}" class="list-group-item">
+          <a href="teamData/{{teamData.member1}}">{{teamData.member1}}</a>
+          <button class="btn btn-danger float-right delete">ｘ</button>
+        </li>
+        <li data-id="{{teamData.id}}" class="list-group-item">
+          <a href="teamData/{{teamData.member2}}">{{teamData.member2}}</a>
+          <button class="btn btn-danger float-right delete">ｘ</button>
+        </li>
+        <li data-id="{{teamData.id}}" class="list-group-item">
+          <a href="teamData/{{teamData.member3}}">{{teamData.member3}}</a>
+          <button class="btn btn-danger float-right delete">ｘ</button>
+        </li>
+        <li data-id="{{teamData.id}}" class="list-group-item">
+          <a href="teamData/{{teamData.member4}}">{{teamData.member4}}</a>
+          <button class="btn btn-danger float-right delete">ｘ</button>
+        </li>
+        <li data-id="{{teamData.id}}" class="list-group-item">
+          <a href="teamData/{{teamData.member5}}">{{teamData.member5}}</a>
+          <button class="btn btn-danger float-right delete">ｘ</button>
+        </li>
+        <li data-id="{{teamData.id}}" class="list-group-item">
+          <a href="teamData/{{teamData.member6}}">{{teamData.member6}}</a>
+          <button class="btn btn-danger float-right delete">ｘ</button>
+        </li>
+      </ul>
       </div>
     </div>
   </div>
