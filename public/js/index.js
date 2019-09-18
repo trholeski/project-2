@@ -34,7 +34,7 @@ var API = {
       url: "api/TeamDatas/" + id,
       type: "DELETE"
     });
-  },
+  }
 };
 
 // refreshTeamList gets new teams from the db and repopulates the list
@@ -100,22 +100,22 @@ var handleDeleteBtnClick = function() {
 
 var joinTeam1 = function() {
   $("#joinTeamForm1").css("display", "block");
-}
+};
 var joinTeam2 = function() {
   $("#joinTeamForm2").css("display", "block");
-}
+};
 var joinTeam3 = function() {
   $("#joinTeamForm3").css("display", "block");
-}
+};
 var joinTeam4 = function() {
   $("#joinTeamForm4").css("display", "block");
-}
+};
 var joinTeam5 = function() {
   $("#joinTeamForm5").css("display", "block");
-}
+};
 var joinTeam6 = function() {
   $("#joinTeamForm6").css("display", "block");
-}
+};
 
 var closeJoinTeam = function() {
   $("#joinTeamForm1").css("display", "none");
@@ -124,8 +124,7 @@ var closeJoinTeam = function() {
   $("#joinTeamForm4").css("display", "none");
   $("#joinTeamForm5").css("display", "none");
   $("#joinTeamForm6").css("display", "none");
-}
-
+};
 
 // Add event listeners to the submit and delete buttons
 $submitBtn.on("click", handleFormSubmit);
