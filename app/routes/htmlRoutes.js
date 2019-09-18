@@ -22,7 +22,7 @@ module.exports = function(app, passport) {
     ) {
         // Render the page to handlebars (teamLobby.handlebars)
         res.render("teamLobby", {
-        teamData: dbTeamData
+        teamData: dbTeamData,
         });
     });
     });
