@@ -10,7 +10,7 @@ var $joinTeam1 = $(".joinTeam1");
 
 // The API object contains methods for each kind of request we'll make
 var API = {
-  saveTeam: function(teamData) {
+  saveTeam: function (teamData) {
     return $.ajax({
       headers: {
         "Content-Type": "application/json"
@@ -20,24 +20,30 @@ var API = {
       data: JSON.stringify(teamData)
     });
   },
-  getTeams: function() {
+  getTeams: function () {
     return $.ajax({
       url: "api/TeamDatas",
       type: "GET"
     });
   },
-  deleteTeam: function(id) {
+  deleteTeam: function (id) {
     return $.ajax({
       url: "api/TeamDatas/" + id,
       type: "DELETE"
     });
+  },
+  joinTeam: function (id) {
+    return $.ajax({
+      url: "/api/userData/" + id,
+      type: "GET"
+    })
   }
 };
 
 // refreshTeamList gets new teams from the db and repopulates the list
-var refreshTeamList = function() {
-  API.getTeams().then(function(data) {
-    var $teamData = data.map(function(teamData) {
+var refreshTeamList = function () {
+  API.getTeams().then(function (data) {
+    var $teamData = data.map(function (teamData) {
       var $a = $("<a>")
         .text(teamData.teamName)
         .attr("href", "/teamData/" + teamData.id);
@@ -63,9 +69,10 @@ var refreshTeamList = function() {
   });
 };
 
+
 // handleFormSubmit is called whenever we submit a new team
 // Save the new team to the db and refresh the list
-var handleFormSubmit = function(event) {
+var handleFormSubmit = function (event) {
   event.preventDefault();
 
   var teamData = {
@@ -78,7 +85,7 @@ var handleFormSubmit = function(event) {
     return;
   }
 
-  API.saveTeam(teamData).then(function() {
+  API.saveTeam(teamData).then(function () {
     refreshTeamList();
   });
 
@@ -88,15 +95,19 @@ var handleFormSubmit = function(event) {
 
 // handleDeleteBtnClick is called when an team's delete button is clicked
 // Remove the team from the db and refresh the list
-var handleDeleteBtnClick = function() {
+var handleDeleteBtnClick = function () {
   var idToDelete = $(this).parent().attr("data-id");
-  API.deleteTeam(idToDelete).then(function() {
+  API.deleteTeam(idToDelete).then(function () {
     refreshTeamList();
   });
 };
 
-var joinTeam1 = function() {
-  console.log();
+var joinTeam1 = function () {
+  var idToJoin = $(this).attr("data-id");
+  API.joinTeam(idToJoin).then(function () {
+    console.log("joined");
+  })
+  setTimeout(location.reload.bind(location), 1500);
 }
 
 
