@@ -8,10 +8,12 @@
 
 :root {
   --primary-color: #000000;
-  --primary-hover-color: #a57825;
+  --primary-hover-color: #FA9C1D;
+  --primary-color-gray: #4A4C4E;
   --bg-color: rgb(87, 84, 84);
   --box-shadow: 3px 4px 12px rgba(0, 0, 0, 0.7);
 }
+
 
 body {
   font-family: 'Lato', sans-serif;
@@ -32,8 +34,6 @@ header {
   box-shadow: var(--box-shadow);
 }
 
-
-
 /* VIDEO - Header */
 header video {
   position: absolute;
@@ -53,7 +53,6 @@ header video {
 header .container {
   position: relative;
   z-index: 2;
-
 }
 
 header .overlay {
@@ -67,8 +66,12 @@ header .overlay {
   z-index: 1;
 }
 
-p {
+.display-3{
   font-family: 'Alegreya Sans', sans-serif;
+}
+
+p {
+  /* font-family: 'Alegreya Sans', sans-serif; */
   text-align: center;
 }
 
@@ -82,13 +85,43 @@ a {
   font-family: 'Alegreya', sans-serif;
   color: rgb(255, 148, 8) !important;
   font-size: 18px;
- }
+}
 
 .form-group {
   text-align: center;
 }
 
+/* ////////////////////////////////// */
+/* TEAM LOBBY PAGE */
+.card-body{
+  margin-bottom: 10px;
+  border-bottom: 4px solid var(--primary-color);
+  box-shadow: var(--box-shadow);
+}
 
+/* NOT MANIPULTING FONT ON TEAM LOBBY PAGE */
+h5{
+  /* font-family: 'Alegreya', sans-serif; */
+  color: black;
+  font-size: 28px;
+}
+
+.text-center{
+  margin-top: 10px;
+}
+
+.open-button{
+  padding: 10px;
+  background: var(--primary-hover-color);
+  border-bottom: 4px solid var(--primary-color);
+  box-shadow: var(--box-shadow);
+}
+
+.open-button:hover{
+  background: var(--primary-color-gray);
+  color: white;
+}
+/* ///////////////////////////////////// */
 
 label {
   font-family: 'Alegreya Sans', sans-serif;

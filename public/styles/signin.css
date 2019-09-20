@@ -26,10 +26,10 @@
 
     /* SIGN UP BOX */
     .user_card_signup{
-        height: 600px;
+        height: 650px;
         width: 350px;
         margin-top: 75px;
-        margin-bottom: auto;
+        margin-bottom: 75px;
         background: var(--primary-t-color);
         position: relative;
         display: flex;
