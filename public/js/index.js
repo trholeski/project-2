@@ -75,6 +75,8 @@ var refreshTeamList = function () {
 var handleFormSubmit = function (event) {
   event.preventDefault();
 
+  console.log('cick: ');
+
   var teamData = {
     teamName: $teamName.val().trim(),
     teamDescription: $teamDescription.val().trim()

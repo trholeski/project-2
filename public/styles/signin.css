@@ -1,0 +1,84 @@
+/* SIGN IN/OUT */
+:root {
+    --primary-color: #4A4C4E;
+    --primary-s-color: #FA9C1D;
+    --primary-t-color: #FFFFFF;
+    --box-shadow: 3px 4px 12px rgba(0, 0, 0, 0.7);
+    }
+
+    /* SIGN IN BOX */
+.user_card {
+    height: 400px;
+    width: 350px;
+    margin-top: 75px;
+    margin-bottom: auto;
+    background: var(--primary-t-color);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+    }
+
+    /* SIGN UP BOX */
+    .user_card_signup{
+        height: 600px;
+        width: 350px;
+        margin-top: 75px;
+        margin-bottom: auto;
+        background: var(--primary-t-color);
+        position: relative;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 10px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        border-radius: 5px; 
+    }
+
+
+  .brand_logo {
+    height: 100px;
+    width: 100px;
+    margin-bottom: 50%;
+    } 
+
+  .form_container {
+    margin-top: 10px;
+    }
+
+
+   /*Login Buttons */
+  .login_btn {
+    width: 100%;
+    background: var(--primary-s-color);
+    color: var(--primary-t-color);
+    }
+
+  .login_btn:focus {
+    box-shadow: none;
+    outline: 0px;
+    }
+
+  .login_container {
+    padding: 0 2rem;
+    }
+
+  .input-group-text {
+    background: var(--primary-color);
+    color: var(--primary-t-color);
+    border: 0;
+    border-radius: 0.25rem 0 0 0.25rem;
+    }
+
+  .input_user,
+  .input_pass:focus {
+    box-shadow: none;
+    outline: 0px;
+    }

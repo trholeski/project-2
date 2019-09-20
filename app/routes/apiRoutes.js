@@ -8,6 +8,23 @@ module.exports = function (app) {
     });
   });
 
+  //NOT TESTED
+  // Displays a single user, or returns false
+      // app.get("/api/TeamDatas/:id", function (req, res) {
+      //   var chosen = req.params.character;
+
+      //   console.log(chosen);
+
+      //   for (var i = 0; i < characters.length; i++) {
+      //     if (chosen === characters[i].routeName) {
+      //       return res.json(characters[i]);
+      //     }
+      //   }
+
+      //   return res.json(false);
+      // });
+
+
   // Create a new TeamData
   app.post("/api/TeamDatas", function (req, res) {
     db.TeamData.create(req.body).then(function (dbTeamData) {

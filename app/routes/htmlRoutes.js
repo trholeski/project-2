@@ -3,7 +3,7 @@ var authController = require('../controllers/authcontroller.js');
 
 module.exports = function(app, passport) {
   // Load Team List page
-    app.get("/", function(req, res) {
+    app.get("/", isLoggedIn, function(req, res) {
     console.log('in app.get/');
     db.TeamData.findAll({}).then(function(dbTeamDatas) {
         console.log('in teamdata.findall');
@@ -30,17 +30,17 @@ module.exports = function(app, passport) {
     app.get('/signin', authController.signin);
 
     app.post('/signup', passport.authenticate('local-signup', {
-            successRedirect: '/dashboard',
+            successRedirect: '/',
             failureRedirect: '/signup'
         }
     ));
 
-    app.get('/dashboard', isLoggedIn, authController.dashboard);
+    // app.get('/dashboard', isLoggedIn, authController.dashboard);
 
     app.get('/logout', authController.logout);
 
     app.post('/signin', passport.authenticate('local-signin', {
-            successRedirect: '/dashboard',
+            successRedirect: '/',
             failureRedirect: '/signin'
     }));
 
