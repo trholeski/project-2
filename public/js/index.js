@@ -6,6 +6,12 @@ var $teamDescription = $("#teamData-description");
 var $submitBtn = $("#submit");
 var $teamDataList = $("#teamData-list");
 var $joinTeam1 = $(".joinTeam1");
+var $deleteMember1 = $("#deleteMember1");
+var $deleteMember2 = $("#deleteMember2");
+var $deleteMember3 = $("#deleteMember3");
+var $deleteMember4 = $("#deleteMember4");
+var $deleteMember5 = $("#deleteMember5");
+var $deleteMember6 = $("#deleteMember6");
 
 
 // The API object contains methods for each kind of request we'll make
@@ -35,6 +41,12 @@ var API = {
   joinTeam: function (id) {
     return $.ajax({
       url: "/api/userData/" + id,
+      type: "GET"
+    })
+  },
+  deleteMember: function (id, member) {
+    return $.ajax({
+      url: "/api/deleteUserData/" + id + "/" + member,
       type: "GET"
     })
   }
@@ -75,8 +87,6 @@ var refreshTeamList = function () {
 var handleFormSubmit = function (event) {
   event.preventDefault();
 
-  console.log('cick: ');
-
   var teamData = {
     teamName: $teamName.val().trim(),
     teamDescription: $teamDescription.val().trim()
@@ -104,6 +114,15 @@ var handleDeleteBtnClick = function () {
   });
 };
 
+var handleDeleteBtnClickMember = function () {
+  var idToDelete = $(this).parent().attr("data-id");
+  var memberToDelete = $(this).parent().attr("data-member")
+  API.deleteMember(idToDelete, memberToDelete).then(function() {
+    console.log("Deleted Member");
+  })
+  setTimeout(location.reload.bind(location), 1500);
+}
+
 var joinTeam1 = function () {
   var idToJoin = $(this).attr("data-id");
   API.joinTeam(idToJoin).then(function () {
@@ -117,3 +136,9 @@ var joinTeam1 = function () {
 $submitBtn.on("click", handleFormSubmit);
 $teamDataList.on("click", ".delete", handleDeleteBtnClick);
 $joinTeam1.on("click", joinTeam1);
+$deleteMember1.on("click", handleDeleteBtnClickMember);
+$deleteMember2.on("click", handleDeleteBtnClickMember);
+$deleteMember3.on("click", handleDeleteBtnClickMember);
+$deleteMember4.on("click", handleDeleteBtnClickMember);
+$deleteMember5.on("click", handleDeleteBtnClickMember);
+$deleteMember6.on("click", handleDeleteBtnClickMember);

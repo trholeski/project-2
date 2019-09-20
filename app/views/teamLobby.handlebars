@@ -14,29 +14,29 @@
         <button class="open-button joinTeam1" data-id="{{teamData.id}}">Join Team</button>
       <h3 class='text-center'>LIST OF MEMBERS</h3>
       <ul id="teamData-list" class="list-group">
-        <li data-id="{{teamData.id}}" class="list-group-item">
+        <li data-id="{{teamData.id}}" data-member="{{teamData.member1}}" class="list-group-item">
           <a href="teamData/{{teamData.member1}}">{{teamData.member1}}</a>
-          <button class="btn btn-danger float-right delete">ｘ</button>
+          <button data-id="{{teamData.id}}" data-member="{{teamData.member1}}" class="btn btn-danger float-right" id="deleteMember1">ｘ</button>
         </li>
-        <li data-id="{{teamData.id}}" class="list-group-item">
+        <li data-id="{{teamData.id}}" data-member="{{teamData.member2}}" class="list-group-item">
           <a href="teamData/{{teamData.member2}}">{{teamData.member2}}</a>
-          <button class="btn btn-danger float-right delete">ｘ</button>
+          <button data-id="{{teamData.id}}" data-member="{{teamData.member2}}" class="btn btn-danger float-right" id="deleteMember2">ｘ</button>
         </li>
-        <li data-id="{{teamData.id}}" class="list-group-item">
+        <li data-id="{{teamData.id}}" data-member="{{teamData.member3}}" class="list-group-item">
           <a href="teamData/{{teamData.member3}}">{{teamData.member3}}</a>
-          <button class="btn btn-danger float-right delete">ｘ</button>
+          <button data-id="{{teamData.id}}" data-member="{{teamData.member3}}" class="btn btn-danger float-right" id="deleteMember3">ｘ</button>
         </li>
-        <li data-id="{{teamData.id}}" class="list-group-item">
+        <li data-id="{{teamData.id}}" data-member="{{teamData.member4}}" class="list-group-item">
           <a href="teamData/{{teamData.member4}}">{{teamData.member4}}</a>
-          <button class="btn btn-danger float-right delete">ｘ</button>
+          <button data-id="{{teamData.id}}" data-member="{{teamData.member4}}" class="btn btn-danger float-right" id="deleteMember4">ｘ</button>
         </li>
-        <li data-id="{{teamData.id}}" class="list-group-item">
+        <li data-id="{{teamData.id}}" data-member="{{teamData.member5}}" class="list-group-item">
           <a href="teamData/{{teamData.member5}}">{{teamData.member5}}</a>
-          <button class="btn btn-danger float-right delete">ｘ</button>
+          <button data-id="{{teamData.id}}" data-member="{{teamData.member5}}" class="btn btn-danger float-right" id="deleteMember5">ｘ</button>
         </li>
-        <li data-id="{{teamData.id}}" class="list-group-item">
+        <li data-id="{{teamData.id}}" data-member="{{teamData.member6}}" class="list-group-item">
           <a href="teamData/{{teamData.member6}}">{{teamData.member6}}</a>
-          <button class="btn btn-danger float-right delete">ｘ</button>
+          <button data-id="{{teamData.id}}" data-member="{{teamData.member6}}" class="btn btn-danger float-right" id="deleteMember6">ｘ</button>
         </li>
       </ul>
       </div>
