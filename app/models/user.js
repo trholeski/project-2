@@ -14,10 +14,16 @@ module.exports = function (sequelize, Sequelize) {
             type: Sequelize.STRING,
             notEmpty: true
         },
-        username: {
+        battletag: {
             type: Sequelize.TEXT
         },
-        about: {
+        role: {
+            type: Sequelize.TEXT
+        },
+        platform: {
+            type: Sequelize.TEXT
+        },
+        region: {
             type: Sequelize.TEXT
         },
         email: {
