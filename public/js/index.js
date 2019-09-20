@@ -117,10 +117,10 @@ var handleDeleteBtnClick = function () {
 var handleDeleteBtnClickMember = function () {
   var idToDelete = $(this).parent().attr("data-id");
   var memberToDelete = $(this).parent().attr("data-member")
-  API.deleteMember(idToDelete, memberToDelete).then(function() {
+  API.deleteMember(idToDelete, memberToDelete).then(function () {
     console.log("Deleted Member");
   })
-  setTimeout(location.reload.bind(location), 1500);
+  setTimeout(location.reload.bind(location), 1000);
 }
 
 var joinTeam1 = function () {
@@ -128,7 +128,7 @@ var joinTeam1 = function () {
   API.joinTeam(idToJoin).then(function () {
     console.log("joined");
   })
-  setTimeout(location.reload.bind(location), 1500);
+  setTimeout(location.reload.bind(location), 1000);
 }
 
 

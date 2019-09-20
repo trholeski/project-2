@@ -24,7 +24,6 @@ module.exports = function (app) {
   //   return res.json(false);
   // });
 
-
   // Create a new TeamData
   app.post("/api/TeamDatas", function (req, res) {
     db.TeamData.create(req.body).then(function (dbTeamData) {
@@ -104,7 +103,7 @@ module.exports = function (app) {
       var member4 = dbTeamData.dataValues.member4;
       var member5 = dbTeamData.dataValues.member5;
       var member6 = dbTeamData.dataValues.member6;
-      var currentUser = req.user.firstname;
+      var currentUser = req.user.battletag;
 
       if (member1 === null) {
         dbTeamData.update({
