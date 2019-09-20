@@ -10,20 +10,19 @@ module.exports = function (app) {
 
   //NOT TESTED
   // Displays a single user, or returns false
-      // app.get("/api/TeamDatas/:id", function (req, res) {
-      //   var chosen = req.params.character;
+  // app.get("/api/TeamDatas/:id", function (req, res) {
+  //   var chosen = req.params.character;
 
-      //   console.log(chosen);
+  //   console.log(chosen);
 
-      //   for (var i = 0; i < characters.length; i++) {
-      //     if (chosen === characters[i].routeName) {
-      //       return res.json(characters[i]);
-      //     }
-      //   }
+  //   for (var i = 0; i < characters.length; i++) {
+  //     if (chosen === characters[i].routeName) {
+  //       return res.json(characters[i]);
+  //     }
+  //   }
 
-      //   return res.json(false);
-      // });
-
+  //   return res.json(false);
+  // });
 
   // Create a new TeamData
   app.post("/api/TeamDatas", function (req, res) {
@@ -39,6 +38,60 @@ module.exports = function (app) {
     });
   });
 
+  // Delete Member 1 from Team
+  app.get("/api/deleteUserData/:id/:member", function (req, res) {
+    db.TeamData.findOne({ where: { id: req.params.id } }).then(function (dbTeamData) {
+      var memberToDelete = req.params.member;
+      var id = dbTeamData.dataValues.id;
+      var member1 = dbTeamData.dataValues.member1;
+      var member2 = dbTeamData.dataValues.member2;
+      var member3 = dbTeamData.dataValues.member3;
+      var member4 = dbTeamData.dataValues.member4;
+      var member5 = dbTeamData.dataValues.member5;
+      var member6 = dbTeamData.dataValues.member6;
+
+      if (member1 === memberToDelete) {
+        dbTeamData.update({
+          member1: null
+        }, { where: id }).then(function (res) {
+          console.log(res);
+        });
+      } else if (member2 === memberToDelete) {
+        dbTeamData.update({
+          member2: null
+        }, { where: id }).then(function (res) {
+          console.log(res);
+        });
+      } else if (member3 === memberToDelete) {
+        dbTeamData.update({
+          member3: null
+        }, { where: id }).then(function (res) {
+          console.log(res);
+        });
+      } else if (member4 === memberToDelete) {
+        dbTeamData.update({
+          member4: null
+        }, { where: id }).then(function (res) {
+          console.log(res);
+        });
+      } else if (member5 === memberToDelete) {
+        dbTeamData.update({
+          member5: null
+        }, { where: id }).then(function (res) {
+          console.log(res);
+        });
+      } else if (member6 === memberToDelete) {
+        dbTeamData.update({
+          member6: null
+        }, { where: id }).then(function (res) {
+          console.log(res);
+        });
+      } else {
+        console.log("Cannot find member on team.")
+      }
+    });
+  });
+
   app.get("/api/userData/:id", function (req, res) {
     db.TeamData.findOne({ where: { id: req.params.id } }).then(function (dbTeamData) {
       // console.log(dbTeamData);
@@ -50,7 +103,7 @@ module.exports = function (app) {
       var member4 = dbTeamData.dataValues.member4;
       var member5 = dbTeamData.dataValues.member5;
       var member6 = dbTeamData.dataValues.member6;
-      var currentUser = req.user.firstname;
+      var currentUser = req.user.battletag;
 
       if (member1 === null) {
         dbTeamData.update({
