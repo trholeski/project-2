@@ -148,7 +148,17 @@ footer {
 }
 
 
-
+/* If the screen size is 600px wide or less, hide the element */
+@media only screen and (max-width: 600px) {
+    .brand {
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        top: 50px;
+    }
+  }
 
 
 
