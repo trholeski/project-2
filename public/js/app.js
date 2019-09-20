@@ -105,10 +105,6 @@ $(document).ready(function () {
         //bronze awards
         $('#compStats').append(`<li>Bronze Awards: ${response.competitiveStats.awards.medalsBronze}</li>`);
 
-
-
-
-
     });
 });
 
