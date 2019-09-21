@@ -48,6 +48,7 @@ module.exports = function (app, passport) {
     app.get("/teamData/teamData/:player", function (req, res) {
         // db.TeamData.findOne({ where: { player: req.user.firstname } })
         res.render('players');
+        
     }
 )
 
