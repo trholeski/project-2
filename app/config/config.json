@@ -1,4 +1,11 @@
 {
+  "development": {
+  "username": "root",
+  "password": "As128128",
+  "database": "teamData_db",
+  "host": "localhost",
+  "dialect": "mysql"
+},
   "production": {
     "use_env_variable": "JAWSDB_URL",
     "dialect": "mysql"
