@@ -12,6 +12,12 @@ var $deleteMember3 = $("#deleteMember3");
 var $deleteMember4 = $("#deleteMember4");
 var $deleteMember5 = $("#deleteMember5");
 var $deleteMember6 = $("#deleteMember6");
+var $profile1 = $("#profile1");
+var $profile2 = $("#profile2");
+var $profile3 = $("#profile3");
+var $profile4 = $("#profile4");
+var $profile5 = $("#profile5");
+var $profile6 = $("#profile6");
 
 
 // The API object contains methods for each kind of request we'll make
@@ -131,6 +137,10 @@ var joinTeam1 = function () {
   setTimeout(location.reload.bind(location), 1000);
 }
 
+var profileBtnClicked = function(){
+    localStorage.setItem('battletag', $(this).attr("data-member")); 
+}
+
 
 // Add event listeners to the submit and delete buttons
 $submitBtn.on("click", handleFormSubmit);
@@ -142,3 +152,9 @@ $deleteMember3.on("click", handleDeleteBtnClickMember);
 $deleteMember4.on("click", handleDeleteBtnClickMember);
 $deleteMember5.on("click", handleDeleteBtnClickMember);
 $deleteMember6.on("click", handleDeleteBtnClickMember);
+$profile1.on("click", profileBtnClicked);
+$profile2.on("click", profileBtnClicked);
+$profile3.on("click", profileBtnClicked);
+$profile4.on("click", profileBtnClicked);
+$profile5.on("click", profileBtnClicked);
+$profile6.on("click", profileBtnClicked);
