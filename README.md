@@ -1,5 +1,5 @@
 # Team Fuze Overwatch Teambuilder
-# Team: Jared Cabanilla, Tim Holeski, Rachel Gundy, & Adrian Situ
+Team: Jared Cabanilla, Tim Holeski, Rachel Gundy, & Adrian Situ
 
 [Link to deployed project](https://blooming-escarpment-23380.herokuapp.com/)
 
